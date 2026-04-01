@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
+type UserRole = "patient" | "volunteer" | "family";
+
 interface UserProfile {
+  role: UserRole;
   name: string;
   age: string;
   emergencyContact: string;
@@ -24,6 +27,7 @@ export const useApp = () => {
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [profile, setProfile] = useState<UserProfile>({
+    role: "patient",
     name: "",
     age: "",
     emergencyContact: "",
