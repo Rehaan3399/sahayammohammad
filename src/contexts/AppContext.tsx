@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
+type UserRole = "patient" | "volunteer" | "family";
+
 interface UserProfile {
+  role: UserRole;
   name: string;
   age: string;
   emergencyContact: string;
