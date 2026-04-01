@@ -27,6 +27,7 @@ export const useApp = () => {
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [profile, setProfile] = useState<UserProfile>({
+    role: "patient",
     name: "",
     age: "",
     emergencyContact: "",
